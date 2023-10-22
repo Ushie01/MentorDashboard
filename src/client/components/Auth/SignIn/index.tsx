@@ -23,7 +23,7 @@ const Login = () => {
 					</div>
 
 					<form
-						className='space-y-6 mt-7'
+						className='space-y-4 mt-7'
 						action='#'
 						method='POST'>
 						<Input
@@ -56,7 +56,7 @@ const Login = () => {
 					</form>
 
 					<OrContinueWith text='Or sign up with' />
-					<SocialLogin />
+					<SocialLogin text='Don`t have an account?' link='SignUp' />
 				</div>
 			</div>
 		</div>

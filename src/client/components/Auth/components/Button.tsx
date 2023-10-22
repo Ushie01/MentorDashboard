@@ -8,7 +8,7 @@ const LoginButton = ({text, link}: {text: string; link: string}) => {
 				<Link href={link}>
 					<Button
 						type='submit'
-						className='flex w-full justify-center  rounded-xl bg-blue-700 py-1.5 text-md font-semibold leading-6 text-white shadow-md'>
+						className='flex w-full justify-center  rounded-xl bg-blue-700 h-12 text-md font-semibold leading-6 text-white shadow-md'>
 						{text}
 					</Button>
 				</Link>

@@ -1,8 +1,9 @@
-import React  from 'react';
+import React, { useState } from 'react';
+import { ControlsEye, ControlsEyeCrossed } from '@heathmont/moon-icons-tw';
 
 type InputProps = {
-    placeHolder: string;
-    inputType: string;
+	placeHolder: string;
+	inputType: string;
 	icon: React.ComponentType<{
 		height: number;
 		width: number;
@@ -11,9 +12,24 @@ type InputProps = {
 	}>;
 };
 
-const Input: React.FC<InputProps> = ({ icon: IconComponent,  inputType, placeHolder}) => {
+const Input: React.FC<InputProps> = ({
+	icon: IconComponent,
+	inputType,
+	placeHolder,
+}) => {
+	const [password, setPassword] = useState('');
+	const [showPassword, setShowPassword] = useState(false);
+
+	const handlePasswordChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+		setPassword(e.target.value);
+	};
+
+	const handleToggleVisibility = () => {
+		setShowPassword(!showPassword);
+	};
+
 	return (
-		<div className='flex bg-white items-center justify-center border rounded-lg'>
+		<div className='flex bg-white items-center justify-center border rounded-lg h-12'>
 			{IconComponent && (
 				<IconComponent
 					height={35}
@@ -24,12 +40,42 @@ const Input: React.FC<InputProps> = ({ icon: IconComponent,  inputType, placeHol
 			)}
 			<input
 				name={inputType}
-				type={inputType}
-                autoComplete={inputType}
-                placeholder={placeHolder}
+				type={
+					inputType === 'password'
+						? showPassword
+							? 'text'
+							: 'password'
+						: inputType
+				}
+				autoComplete={inputType}
+				placeholder={placeHolder}
+				value={password}
+				onChange={handlePasswordChange}
 				required
-				className='h-8 w-full borderless-input'
+				className='h-10 w-full borderless-input'
 			/>
+
+			{inputType === 'password' && (
+				<button
+					type='button'
+					onClick={handleToggleVisibility}>
+					{showPassword ? (
+						<ControlsEye
+							height={35}
+							width={35}
+							color='gray'
+							className='m-1'
+						/>
+					) : (
+						<ControlsEyeCrossed
+							height={35}
+							width={35}
+							color='gray'
+							className='m-1'
+						/>
+					)}
+				</button>
+			)}
 		</div>
 	);
 };

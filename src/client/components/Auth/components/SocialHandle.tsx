@@ -5,13 +5,12 @@ import GoogleIcon from '../../../components/Svg/google';
 import FacebookIcon from '../../../components/Svg/facebook';
 
 
-const SocialHandle = () => {
+const SocialHandle = ({text, link}: {text: string, link: string}) => {
 	return (
 		<div>
 			<div className='flex items-center mt-8 w-full space-x-3'>
 				<Button
-					type='submit'
-					className='flex justify-center w-full  rounded-xl border'>
+					className='flex justify-center w-full  rounded-xl border h-12'>
 					<GoogleIcon
 						width='20'
 						height='20'
@@ -19,8 +18,7 @@ const SocialHandle = () => {
 					<p className='text-black font-bold'>Google</p>
 				</Button>
 				<Button
-					type='submit'
-					className='flex w-full justify-center rounded-xl border text-sm font-semibold leading-6 text-white shadow-sm '>
+					className='flex w-full justify-center rounded-xl border h-12'>
 					<FacebookIcon
 						width='20'
 						height='20'
@@ -30,12 +28,11 @@ const SocialHandle = () => {
 				</Button>
 			</div>
 			<p className='mt-10 text-center text-sm text-gray-500'>
-				Don`t have an account?
+				{text}
 				<Link
 					href='/signup'
-					className='font-bold leading-6 text-blue-700'>
-					{' '}
-					Sign up
+					className='font-bold leading-6 text-blue-700 pl-1'>
+					{link}
 				</Link>
 			</p>
 		</div>
