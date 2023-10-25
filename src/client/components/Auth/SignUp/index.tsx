@@ -5,18 +5,17 @@ import {
 	GenericUser,
 } from '@heathmont/moon-icons-tw';
 import SocialLogin from '../components/SocialHandle';
-import SideImage from '../components/SideSection';
 import OrContinueWith from '../components/OrContinueWith';
 import LoginButton from '../components/Button';
-import Link from 'next/link';
 import Input from '@/src/shared/Input';
 import Checkbox from '@/src/shared/Checkbox';
+import SideSection from '../components/SideSection';
 
 
 const SignUp = () => {
 	return (
 		<div className='flex items-center justify-center w-full h-full'>
-			<SideImage />
+			<SideSection />
 			<div className='px-6 py-12 lg:w-1/2 w-full'>
 				<div className='mt-10 sm:mx-auto sm:w-full sm:max-w-sm'>
 					<div className='flex flex-col'>
