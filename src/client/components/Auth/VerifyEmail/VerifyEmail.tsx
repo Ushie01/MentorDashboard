@@ -1,8 +1,6 @@
 import React from 'react'
 import LoginButton from '../components/Button';
-import OrContinueWith from '../components/OrContinueWith';
 import SideSection from '../components/SideSection';
-import SocialHandle from '../components/SocialHandle';
 import Link from 'next/link';
 
 const VerifyEmail = () => {
