@@ -79,7 +79,6 @@ const SideSection = () => {
 							/>
 							<p className='text-gray-400 font-semibold'>Dark Mode</p>
                         </div>
-                        
                         <Toggle />
 					</div>
 				</div>

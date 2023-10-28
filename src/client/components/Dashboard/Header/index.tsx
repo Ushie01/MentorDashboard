@@ -10,18 +10,17 @@ import Avatar from '../assets/Avatar.png';
 
 const Header = () => {
 	return (
-		<div className='flex items-center justify-between p-6 h-[76px] bg-gray-100 w-full'>
+		<div className='flex items-center justify-between p-6 h-[76px] bg-white w-full'>
 			<h1 className='text-black text-2xl font-bold'>Dashboard</h1>
 			<div className='flex items-center space-x-5'>
-				<div className='flex items-center border px-2 bg-gray-100 rounded-lg h-8'>
+				<div className='flex items-center border px-2 bg-white rounded-lg h-8'>
 					<GenericSearch
 						height={25}
 						width={25}
-						// color='g'
 					/>
 					<input
 						type='text'
-						className='w-44 borderless-input rounded-lg pl-2 bg-gray-100'
+						className='w-44 borderless-input rounded-lg pl-2 bg-white'
 						placeholder='Search...'
 					/>
 				</div>

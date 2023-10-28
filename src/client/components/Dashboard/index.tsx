@@ -1,6 +1,7 @@
 import React from 'react';
 import SideSection from './SideSection';
 import Header from './Header';
+import MainSection from './MainSection';
 
 const Dashboard = () => {
 	return (
@@ -9,8 +10,9 @@ const Dashboard = () => {
       <SideSection />
 
       </div>
-      <div className='relative flex w-4/5'>
+      <div className='relative flex flex-col w-4/5 bg-gray-100'>
         <Header />
+        <MainSection />
       </div>
 		</div>
 	);
