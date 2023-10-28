@@ -15,7 +15,7 @@ const SideSection = () => {
 	const [state, setState] = useState(true);
 
 	return (
-		<div className='flex flex-col bg-white h-screen w-full border-r'>
+		<div className='flex flex-col bg-white h-screen w-full border-r fixed'>
 			<div className='pl-6 py-6'>
 				<Image
 					src={Logo}

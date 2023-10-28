@@ -10,7 +10,7 @@ import Avatar from '../assets/Avatar.png';
 
 const Header = () => {
 	return (
-		<div className='flex items-center justify-between p-6 h-[76px] bg-white w-full'>
+		<div className='flex items-center justify-between p-6 h-[76px] bg-white border-l border-gray-200'>
 			<h1 className='text-black text-2xl font-bold'>Dashboard</h1>
 			<div className='flex items-center space-x-5'>
 				<div className='flex items-center border px-2 bg-white rounded-lg h-8'>

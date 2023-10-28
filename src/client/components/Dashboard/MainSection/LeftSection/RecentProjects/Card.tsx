@@ -6,21 +6,30 @@ import { Other3DotsHorizontal } from '@heathmont/moon-icons-tw';
 // import pic from '../../../assets/Avatar.png';
 
 type Props = {
-  title: string;
-  percentage: number;
-  progressColor: string;
-  progressCount: string;
-  pic: StaticImageData;
-  peopleCount: string,
-  tickCount: string,
-  totalTickCount: string
-}
+	title: string;
+	percentage: number;
+	progressColor: string;
+	progressCount: string;
+	pic: StaticImageData;
+	peopleCount: string;
+	tickCount: string;
+	totalTickCount: string;
+};
 
-const Card = ({title, percentage, progressColor, progressCount, pic, peopleCount, tickCount, totalTickCount}: Props) => {
+const Card = ({
+	title,
+	percentage,
+	progressColor,
+	progressCount,
+	pic,
+	peopleCount,
+	tickCount,
+	totalTickCount,
+}: Props) => {
 	return (
 		<div className='p-3 w-56 rounded-lg bg-gray-50'>
 			<div className='flex items-center justify-between'>
-        <p className='font-bold text-black'>{title}</p>
+				<p className='font-bold text-black'>{title}</p>
 				<Other3DotsHorizontal
 					width={35}
 					height={25}
@@ -29,22 +38,22 @@ const Card = ({title, percentage, progressColor, progressCount, pic, peopleCount
 
 			<div className='flex items-center justify-between mt-4'>
 				<p className='text-gray-500 text-xs'>Progress</p>
-        <p className='font-semibold text-black'>{progressCount}</p>
+				<p className='font-semibold text-black'>{progressCount}</p>
 			</div>
 
 			<Progress
 				value={percentage}
 				size='4xs'
-        progressColor={progressColor}
+				progressColor={progressColor}
 				bgColor='bg-gray-400'
 				className='mt-2'
 			/>
 
 			<div className='flex items-center justify-between mt-2 w-[170px]'>
 				<div className='flex items-center space-x-1'>
-					<Tick />
+					<Tick width='16' height='17'/>
 					<p className='text-xs'>
-            <span className='font-semibold'>{tickCount}</span>/{totalTickCount}
+						<span className='font-semibold'>{tickCount}</span>/{totalTickCount}
 					</p>
 				</div>
 
