@@ -2,6 +2,7 @@ import React from 'react';
 import { Other3DotsHorizontal } from '@heathmont/moon-icons-tw';
 import Card from './Card';
 import { PROJECTS_DATA } from '../../Constant/data';
+import Link from 'next/link';
 
 const RecentProjects = () => {
 	return (
@@ -18,9 +19,13 @@ const RecentProjects = () => {
 
 			<div className='flex flex-row items-center justify-between'>
 				{PROJECTS_DATA.map((value, index) => (
-					<div key={index}>
-						<Card {...value} />
-					</div>
+					<Link
+						href='#'
+						key={index}>
+						<div>
+							<Card {...value} />
+						</div>
+					</Link>
 				))}
 			</div>
 		</div>

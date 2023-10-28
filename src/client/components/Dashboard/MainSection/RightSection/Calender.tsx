@@ -1,5 +1,9 @@
 import React, { useState } from 'react';
 import {
+	ControlsChevronLeftSmall,
+	ControlsChevronRightSmall,
+} from '@heathmont/moon-icons-tw';
+import {
 	format,
 	addMonths,
 	subMonths,
@@ -9,6 +13,7 @@ import {
 	isSameMonth,
 	getDay,
 } from 'date-fns';
+import Link from 'next/link';
 
 const Calendar: React.FC = () => {
 	const [currentMonth, setCurrentMonth] = useState(new Date());
@@ -69,7 +74,7 @@ const Calendar: React.FC = () => {
 							className={`text-xs p-2 rounded-full text-center ${
 								isSameMonth(day, currentMonth) ? 'text-black' : 'text-gray-300'
 							} ${isToday ? 'bg-blue-700 shadow-lg text-white' : ''}`}>
-							{format(day, 'd')}
+							<Link href='#'>{format(day, 'd')}</Link>
 						</td>
 					);
 				})}
@@ -85,18 +90,20 @@ const Calendar: React.FC = () => {
 				</span>
 
 				<div className='flex items-center justify-center space-x-3'>
-					<button
+					<ControlsChevronLeftSmall
 						onClick={previousMonth}
+						height={25}
+						width={25}
 						className={`font-bold text-md ${
-							clickPrevious ? 'text-blue-500' : ''
-						}`}>
-						{'<'}
-					</button>
-					<button
+							clickPrevious ? 'text-blue-700' : ''
+						}`}
+					/>
+					<ControlsChevronRightSmall
+						height={25}
+						width={25}
 						onClick={nextMonth}
-						className={`font-bold text-md ${clickNext ? 'text-blue-500' : ''}`}>
-						{'>'}
-					</button>
+						className={`font-bold text-md ${clickNext ? 'text-blue-700' : ''}`}
+					/>
 				</div>
 			</div>
 			<hr />

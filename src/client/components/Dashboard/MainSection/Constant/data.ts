@@ -51,3 +51,14 @@ export const SUMMARY_DATA = [
     {icon: Group, title: 'Assigned', rating: '79', bgColor: 'bg-blue-400'},
     {icon: Tick, title: 'Closed', rating: '89', bgColor: 'bg-gray-200'}
 ]
+
+export const TASK_DATA = [
+    { text: 'Create userflow for Hisphonic Application Design', title: 'In Review', pic: pic },
+     {text: 'Homepage design for Diphub Application', title: 'In Review', pic: pic}
+]
+
+export const MESSAGE_DATA = [
+    { image: pic, name: 'Andreana Viola', text: "Hi, how're you doing today?", time: '8:15am', online: false},
+    { image: pic, name: 'Francesco Long', text: "Hi @Angel, I hope you are doing well...", time: '7:30am', online: true },
+    { image: pic, name: 'Alexandra Michu', text: "Hi, how're you doing today?", time: '23/11', online: false}
+]

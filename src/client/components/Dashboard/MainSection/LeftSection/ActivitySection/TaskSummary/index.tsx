@@ -4,34 +4,42 @@ import Card from './Card';
 import { Other3DotsHorizontal } from '@heathmont/moon-icons-tw';
 import { SUMMARY_DATA } from '../../../Constant/data';
 import chart from '../../../../assets/chart.png';
+import Link from 'next/link';
+
 
 const TaskSummary = () => {
 	return (
 		<div className='bg-white p-4 rounded-md'>
 			<div className='flex items-center justify-between'>
 				<p className='font-bold text-black'>Task Summary</p>
-				<Other3DotsHorizontal
-					width={35}
-					height={25}
-				/>
+				<Link href='#'>
+					<Other3DotsHorizontal
+						width={35}
+						height={25}
+					/>
+				</Link>
 			</div>
 
 			<div className='flex items-center justify-center space-x-3 mt-2'>
 				{SUMMARY_DATA.map((value, index) => (
-					<div key={index}>
-						<Card
-							icon={
-								<value.icon
-									height='20'
-									width='20'
-								/>
-							}
-							title={value.title}
-							rating={value.rating}
-							bgColor={value.bgColor}
-							index={index}
-						/>
-					</div>
+					<Link
+						href='#'
+						key='#'>
+						<div>
+							<Card
+								icon={
+									<value.icon
+										height='20'
+										width='20'
+									/>
+								}
+								title={value.title}
+								rating={value.rating}
+								bgColor={value.bgColor}
+								index={index}
+							/>
+						</div>
+					</Link>
 				))}
 			</div>
 

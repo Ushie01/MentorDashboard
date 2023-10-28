@@ -3,7 +3,7 @@ import Image, { StaticImageData } from 'next/image';
 import Tick from '@/src/client/components/Svg/Tick';
 import { Progress } from '@heathmont/moon-core-tw';
 import { Other3DotsHorizontal } from '@heathmont/moon-icons-tw';
-// import pic from '../../../assets/Avatar.png';
+
 
 type Props = {
 	title: string;

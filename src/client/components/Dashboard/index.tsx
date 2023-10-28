@@ -5,7 +5,7 @@ import MainSection from './MainSection';
 
 const Dashboard = () => {
 	return (
-    <div className='flex bg-gray-200 w-full h-screen'>
+    <div className='flex bg-gray-200 w-full h-max'>
       <div className='w-1/5'>
       <SideSection />
 

@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 import Logo from './../assets/logo.png';
 import { ROUTE_DATA } from '../constant/data';
@@ -6,21 +6,20 @@ import Link from 'next/link';
 import {
 	ControlsPlus,
 	GenericSettings,
-	OtherSun,
 	OtherMoon,
 } from '@heathmont/moon-icons-tw';
 import Toggle from '@/src/shared/Toggle/Toggle';
 
 const SideSection = () => {
-	const [state, setState] = useState(true);
-
 	return (
-		<div className='flex flex-col bg-white h-screen w-full border-r fixed'>
+		<div className='flex flex-col bg-white h-screen w-full border-r sticky top-0'>
 			<div className='pl-6 py-6'>
-				<Image
-					src={Logo}
-					alt='Logo alt'
-				/>
+				<Link href='#'>
+					<Image
+						src={Logo}
+						alt='Logo alt'
+					/>
+				</Link>
 			</div>
 
 			<hr />
@@ -46,40 +45,45 @@ const SideSection = () => {
 
 			<hr />
 
-			<div className='flex px-6 py-5'>
-				<div className='flex items-center justify-between w-full'>
-					<p className='text-md font-bold text-gray-400'>PROJECTS</p>
+			<div className='flex px-6 py-5 items-center justify-between w-full'>
+				<p className='text-md font-bold text-gray-400'>PROJECTS</p>
+
+				<Link href='#'>
 					<ControlsPlus
 						height={25}
 						width={25}
 						color='gray'
 					/>
-				</div>
+				</Link>
 			</div>
 
 			<div className='absolute inset-x-0 bottom-8 w-full'>
 				<div className='w-full flex flex-col space-y-4 bot'>
 					<div className='flex px-6'>
-						<div className='flex items-center  space-x-3'>
+						<Link
+							href='#'
+							className='flex items-center  space-x-3'>
 							<GenericSettings
 								height={25}
 								width={25}
 							/>
 							<p className='text-gray-400 font-semibold'>Settings</p>
-						</div>
+						</Link>
 					</div>
 
 					<hr />
 
 					<div className='flex items-center justify-between px-6 w-[270px]'>
-						<div className='flex items-center  space-x-3 w-full'>
+						<Link
+							href='#'
+							className='flex items-center  space-x-3 w-full'>
 							<OtherMoon
 								height={25}
 								width={25}
 							/>
 							<p className='text-gray-400 font-semibold'>Dark Mode</p>
-                        </div>
-                        <Toggle />
+						</Link>
+						<Toggle />
 					</div>
 				</div>
 			</div>
