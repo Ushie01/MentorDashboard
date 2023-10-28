@@ -15,20 +15,20 @@ const ActivityCard = () => {
 			</div>
 
 			<div className='flex'>
-				<div className='flex flex-col items-center justify-between text-gray-400 text-xs mt-5'>
+				<div className='flex flex-col items-center justify-between text-gray-400 text-xs mt-2 mb-2'>
 					{YAxis.map((value, index) => (
 						<p key={index}>{value}</p>
 					))}
 				</div>
 
-				<div className='flex flex-col mt-10'>
+				<div className='flex flex-col mt-9 pl-5'>
 					<Image
 						src={Line}
 						alt='line alt'
 						className='w-full'
 					/>
 
-					<div className='flex items-center justify-between text-xs text-gray-400 w-full mt-5'>
+					<div className='flex items-center justify-between text-xs text-gray-400 w-full'>
 						{XAxis.map((value, index) => (
 							<p key={index}>{value}</p>
 						))}

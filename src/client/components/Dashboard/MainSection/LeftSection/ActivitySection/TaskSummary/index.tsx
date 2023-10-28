@@ -16,14 +16,14 @@ const TaskSummary = () => {
 				/>
 			</div>
 
-			<div className='flex items-center justify-center space-x-2 mt-2'>
+			<div className='flex items-center justify-center space-x-3 mt-2'>
 				{SUMMARY_DATA.map((value, index) => (
 					<div key={index}>
 						<Card
 							icon={
 								<value.icon
 									height='20'
-									width='30'
+									width='20'
 								/>
 							}
 							title={value.title}

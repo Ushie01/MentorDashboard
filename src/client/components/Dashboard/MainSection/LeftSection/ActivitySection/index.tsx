@@ -6,7 +6,10 @@ const ActivitySection = () => {
   return (
       <div className='flex items-start justify-between mt-6 space-x-6'>
           <ActivityCard />
-          <TaskSummaryCard />
+      <TaskSummaryCard />
+      <div className=''>
+
+      </div>
     </div>
   )
 }

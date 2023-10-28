@@ -27,7 +27,7 @@ const Card = ({
 	totalTickCount,
 }: Props) => {
 	return (
-		<div className='p-3 w-56 rounded-lg bg-gray-50'>
+		<div className='p-3 w-60 rounded-lg bg-gray-50'>
 			<div className='flex items-center justify-between'>
 				<p className='font-bold text-black'>{title}</p>
 				<Other3DotsHorizontal
@@ -49,7 +49,7 @@ const Card = ({
 				className='mt-2'
 			/>
 
-			<div className='flex items-center justify-between mt-2 w-[170px]'>
+			<div className='flex items-center justify-between mt-4 w-[170px]'>
 				<div className='flex items-center space-x-1'>
 					<Tick width='16' height='17'/>
 					<p className='text-xs'>

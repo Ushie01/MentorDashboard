@@ -3,7 +3,7 @@ import Calender from './Calender'
 
 const RightSection = () => {
   return (
-    <div>
+    <div className='w-2/5'>
       <Calender />
     </div>
   )

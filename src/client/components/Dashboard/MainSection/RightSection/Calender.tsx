@@ -66,9 +66,9 @@ const Calendar: React.FC = () => {
 					return (
 						<td
 							key={dayIndex}
-							className={`p-2 text-xs text-center ${
+							className={`text-xs p-2 rounded-full text-center ${
 								isSameMonth(day, currentMonth) ? 'text-black' : 'text-gray-300'
-							} ${isToday ? 'bg-blue-700 shadow-lg text-white rounded-full' : ''}`}>
+							} ${isToday ? 'bg-blue-700 shadow-lg text-white' : ''}`}>
 							{format(day, 'd')}
 						</td>
 					);
@@ -84,7 +84,7 @@ const Calendar: React.FC = () => {
 					{format(currentMonth, 'MMMM yyyy')}
 				</span>
 
-				<div className='flex items-center justify-center space-x-1'>
+				<div className='flex items-center justify-center space-x-3'>
 					<button
 						onClick={previousMonth}
 						className={`font-bold text-md ${
@@ -100,7 +100,7 @@ const Calendar: React.FC = () => {
 				</div>
 			</div>
 			<hr />
-			<table className='table-auto'>
+			<table className='table-auto w-full'>
 				<thead>
 					<tr className='text-xs'>
 						<th className='p-2'>Su</th>

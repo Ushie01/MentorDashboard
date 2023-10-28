@@ -11,7 +11,7 @@ type Props = {
 const Card: React.FC<Props> = ({ icon, title, rating, bgColor, index }: Props) => {
 	return (
 		<div
-			className={`flex flex-col items-center justify-center rounded-lg px-5 py-4 ${bgColor} space-y-2`}>
+			className={`flex flex-col items-center justify-center rounded-lg px-6 py-4 ${bgColor} space-y-2`}>
 			<div className={`flex items-center justify-center h-8 w-8 rounded-full border ${index === 2 ? 'border-gray-300' : 'border-white'}`}>
 				{icon}
 			</div>
