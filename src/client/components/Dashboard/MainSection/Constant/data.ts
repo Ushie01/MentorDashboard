@@ -53,7 +53,7 @@ export const SUMMARY_DATA = [
 ]
 
 export const TASK_DATA = [
-    { text: 'Create userflow for Hisphonic Application Design', title: 'In Review', pic: pic },
+     {text: 'Create userflow for Hisphonic Application Design', title: 'In Review', pic: pic },
      {text: 'Homepage design for Diphub Application', title: 'In Review', pic: pic}
 ]
 

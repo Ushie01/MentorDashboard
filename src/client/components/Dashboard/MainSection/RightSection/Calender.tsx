@@ -41,7 +41,6 @@ const Calendar: React.FC = () => {
 	let currentWeek: Date[] = [];
 
 	const currentDay = new Date();
-
 	const firstDayIndex = getDay(startOfMonth(currentMonth));
 	for (let i = 0; i < firstDayIndex; i++) {
 		currentWeek.push(new Date());
