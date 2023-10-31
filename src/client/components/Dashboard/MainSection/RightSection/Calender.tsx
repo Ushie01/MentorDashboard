@@ -16,6 +16,7 @@ import {
 import Link from 'next/link';
 
 const Calendar: React.FC = () => {
+	console.log('hello world')
 	const [currentMonth, setCurrentMonth] = useState(new Date());
 	const [clickPrevious, setClickPrevious] = useState(false);
 	const [clickNext, setClickNext] = useState(false);
